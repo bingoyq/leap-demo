@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqls xmlns="http://www.leapframework.org/schema/sqls">
+    <command key="user-list">
+        SELECT DISTINCT u.*
+        FROM
+        sec_user u
+        INNER JOIN sec_user_org uo
+        ON uo.`user_id` = u.`id`
+        INNER JOIN sec_organization o
+        ON o.`id` = uo.`org_id`
+      {?  AND o.id = #orgId#}
+        WHERE u.`is_delete` = 0
+        {? and u.name LIKE CONCAT(CONCAT('%',#search#),'%') ESCAPE '/'}
+    </command>
+</sqls>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apis xmlns="http://www.leapframework.org/schema/web/apis/apis">
+
+    <!-- <global>
+        <oauth enabled="false">
+            <authz-url>http://10.201.76.136:9094/ssov3/oauth2/authorize</authz-url>
+            <token-url>"http://10.201.76.136:9094/ssov3/oauth2/token</token-url>
+        </oauth>
+    </global> -->
+
+   	<api name="api-console" base-path="/">
+        <version>1.0</version>
+        <title>API console</title>
+    </api>
+
+    <api name="api-console-auth" base-path="/auth">
+        <version>1.0</version>
+        <title>Auth helper for API console.</title>
+    </api>
+
+    <api name="sso-api" base-path="/sso" base-package="net.bingosoft.sso.console.restapi">
+        <version>1.0</version>
+        <title>SSO Api</title>
+    </api>
+
+</apis>

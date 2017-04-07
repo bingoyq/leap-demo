@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.leapframework.org/schema/config">
+	<base-package>leap.paas</base-package>
+	<properties>
+
+		<property name="jdbc.driverClassName">com.mysql.jdbc.Driver</property>
+		<property name="jdbc.url">jdbc:mysql://10.201.76.162:3306/paas_user_api?characterEncoding=UTF-8</property>
+		<property name="jdbc.username">root</property>
+		<property name="jdbc.password">root</property>
+		<property name="jdbc.initialSize">2</property>
+		<property name="jdbc.maxActive">5</property>
+		<property name="jdbc.maxIdle">5</property>
+		<property name="jdbc.minIdle">1</property>
+		<property name="jdbc.validationQuery">select 1</property>
+
+	</properties>
+
+	<properties prefix="webmvc.cors">
+		<property name="exposedHeaders[]">X-Total-Count</property>
+		<property name="exposedHeaders[]">bgw-x-request-id</property>
+		<property name="exposedHeaders[]">content-length</property>
+	</properties>
+
+	<!-- 对外配置 -->
+	<properties prefix="conf">
+		<property name="publickey">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDASOjIWexLpnXiJNJF2pL6NzPfBoF0tKEr2ttAkJ/7f3uUHhj2NIhQ01Wu9OjHfXjCvQSXMWqqc1+O9G1UwB2XslbWNwEZFMwmQdP5VleGbJLR3wOl3IzdggkxBJ1Q9rXUlVtslK/CsMtkwkQEg0eZDH1VeJXqKBlEhsNckYIGQIDAQAB</property>
+	</properties>
+</config>
